@@ -1,0 +1,108 @@
+.choose {
+    background-color: rgb(235, 174, 174);
+    width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    color: rgb(58, 57, 57);
+    text-align: center;
+}
+
+.choose h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.nochoose {
+    background-color: rgb(235, 174, 174);
+    width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+input[type="text"], input[type="password"]
+{
+    background: rgba(245, 28, 28, 0);
+    border: none;
+    outline: none;
+    color: rgb(58, 57, 57);
+    margin: 5px;
+}
+
+::placeholder {
+    color: rgb(58, 57, 57);
+    opacity: 0.7;
+  }
+
+.forca-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    
+}
+
+.forca {
+    position: absolute;
+}
+
+.cordaForca {
+    position: absolute;
+    width: 70px;
+    height: 80px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.cabeca {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    left: 32px;
+    top: 10px;
+
+}
+
+.corpo {
+    position: absolute;
+    width: 70px;
+    height: 66px;
+    left: 6px;
+    top: 0px;
+
+}
+
+.braco1 {
+    position: absolute;
+    width: 120px;
+    height: 85px;
+    top: 7px;
+    left: 18px;
+
+}
+
+.braco2 {
+    position: absolute;
+    width: 120px;
+    height: 85px;
+    top: 7px;
+    left: 19px;
+
+}
+
+.perna1 {
+    position: absolute;
+    width: 120px;
+    height: 85px;
+    top: 8px;
+    left: 19px;
+
+}
+
+.perna2 {
+    position: absolute;
+    width: 120px;
+    height: 85px;
+    top: 8px;
+    left: 18px;
+}
