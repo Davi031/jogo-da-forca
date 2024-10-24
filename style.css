@@ -106,3 +106,7 @@ input[type="text"], input[type="password"]
     top: 8px;
     left: 18px;
 }
+
+.containsAllSecondBlock{
+    display: none;
+}

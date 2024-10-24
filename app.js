@@ -1,4 +1,3 @@
-const inLetra = document.getElementById('inLetra')
 const addLetra = document.getElementById('addLetra')
 const traceOrLetters = document.getElementById('traceOrLetters')
 const chancesDiv = document.getElementById('chances')
@@ -26,9 +25,14 @@ const gameData = {
 }
 
 playGame.addEventListener('click', () => {
-
     gameData.palavra = palavraNaForca.value.trim().toLowerCase()
-    gameData.chances = gameData.palavra.length
+
+    if (gameData.palavra.length > 6) {
+        alert('A palavra deve ter no máximo 6 letras.')
+        return
+    }
+
+    gameData.chances = gameData.palavra.length  
     gameData.erros = []
     gameData.letrasCorretas = []
 
@@ -49,16 +53,15 @@ playGame.addEventListener('click', () => {
     }).join(' ')
 
     traceOrLetters.innerHTML = listTrace
-
     chancesDiv.textContent = `Chances: ${gameData.chances}`
 })
-
 
 addLetra.addEventListener('click', () => {
     verifyAnswer()
 })
 
 const verifyAnswer = () => {
+    const inLetra = document.getElementById('inLetra')
 
     const wordOnInput = inLetra.value.trim().toLowerCase()
     inLetra.value = ''
@@ -76,6 +79,7 @@ const verifyAnswer = () => {
             gameData.erros.push(wordOnInput)
             mostrarParteDoCorpo(gameData.erros.length)
         }
+
         chancesDiv.textContent = `Chances: ${gameData.chances - gameData.erros.length}`
     }
 
@@ -126,7 +130,7 @@ const atualizarPalavra = () => {
 
 
 const mostrarParteDoCorpo = (numeroDeErros) => {
-    if (numeroDeErros < partesDoCorpo.length) {
+    if (numeroDeErros <= partesDoCorpo.length) {
         const parte = partesDoCorpo[numeroDeErros - 1]
         if (parte) {
             parte.style.display = 'block'
